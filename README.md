@@ -97,3 +97,4 @@ Solution
 vim ~/.kube/config
 ```
 Edit config change 'beta' to 'alpha'
+
