@@ -86,3 +86,14 @@ Completing the project involves several steps:
 6. Create a CodeBuild stage which will build, test, and deploy your code
 
 For more detail about each of these steps, see the project lesson.
+
+Error:
+```bash
+(base) Tyrones-MacBook-Pro-2:cd0157-Server-Deployment-and-Containerization tyronejereza$ kubectl get -n kube-system configmap/aws-auth -o yaml > /tmp/aws-auth-patch.yml
+Unable to connect to the server: getting credentials: exec plugin is configured to use API version client.authentication.k8s.io/v1beta1, plugin returned version client.authentication.k8s.io/v1alpha1
+```
+Solution
+```bash
+vim ~/.kube/config
+```
+Edit config change 'beta' to 'alpha'
