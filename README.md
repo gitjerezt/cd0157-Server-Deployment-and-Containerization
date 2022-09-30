@@ -97,3 +97,7 @@ Solution
 vim ~/.kube/config
 ```
 Edit config change 'beta' to 'alpha'
+
+export TOKEN=`curl -d '{"email":"<EMAIL>","password":"<PASSWORD>"}' -H "Content-Type: application/json" -X POST a17654d57d694491ca3f639bf19023a7-336380267.us-east-2.elb.amazonaws.com/auth  | jq -r '.token'`
+
+curl --request GET 'a17654d57d694491ca3f639bf19023a7-336380267.us-east-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq 
